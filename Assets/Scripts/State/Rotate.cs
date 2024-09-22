@@ -22,7 +22,7 @@ public class Rotate : StateMachineBehaviour
     private System.Collections.IEnumerator RotateCharacter()
     {
         // Calculate the target rotation
-        Quaternion targetRotation = Quaternion.Euler(0, targetRotationY, 0);
+        Quaternion targetRotation = Quaternion.Euler(0, 0, targetRotationY);
 
         // Rotate the character smoothly towards the target rotation
         while (Quaternion.Angle(characterTransform.rotation, targetRotation) > 0.1f)
