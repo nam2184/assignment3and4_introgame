@@ -217,12 +217,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5848339510805600233, guid: f28517fb475a4a59d9448115e93667bc, type: 3}
+  m_Sprite: {fileID: 1863864415795655316, guid: f28517fb475a4a59d9448115e93667bc, type: 3}
   m_Color: {r: 0.41960785, g: 0.68235296, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.40625, y: 0.40625}
+  m_Size: {x: 0.19, y: 0.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -326,12 +326,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5848339510805600233, guid: f28517fb475a4a59d9448115e93667bc, type: 3}
+  m_Sprite: {fileID: 1863864415795655316, guid: f28517fb475a4a59d9448115e93667bc, type: 3}
   m_Color: {r: 0.41960785, g: 0.68235296, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.40625, y: 0.40625}
+  m_Size: {x: 0.19, y: 0.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 517459401}
   - component: {fileID: 517459403}
   m_Layer: 0
-  m_Name: pacman_1
+  m_Name: Pacstudent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,11 +410,11 @@ Transform:
   m_GameObject: {fileID: 517459399}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.368, y: 0.371, z: 0.02123032}
+  m_LocalPosition: {x: 0.6933389, y: 0.2823097, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1220811340}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &517459401
 Animator:
@@ -481,12 +481,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6846246853087037126, guid: ab83a40d11d517c8ca4e5dde8769cef7, type: 3}
+  m_Sprite: {fileID: 1192333917916147692, guid: 08c6d29d2489ef819b6ac28809dcce50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.18}
+  m_Size: {x: 0.19, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -611,7 +611,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -848,38 +848,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1220811339
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1220811340}
-  m_Layer: 0
-  m_Name: Pacman
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1220811340
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220811339}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0613389, y: -0.08869029, z: -0.02123032}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 517459400}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1278230536
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,12 +946,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5848339510805600233, guid: f28517fb475a4a59d9448115e93667bc, type: 3}
+  m_Sprite: {fileID: 1863864415795655316, guid: f28517fb475a4a59d9448115e93667bc, type: 3}
   m_Color: {r: 0.41960785, g: 0.68235296, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.40625, y: 0.40625}
+  m_Size: {x: 0.19, y: 0.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1072,12 +1040,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5848339510805600233, guid: f28517fb475a4a59d9448115e93667bc, type: 3}
+  m_Sprite: {fileID: 1863864415795655316, guid: f28517fb475a4a59d9448115e93667bc, type: 3}
   m_Color: {r: 0.41960785, g: 0.68235296, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.40625, y: 0.40625}
+  m_Size: {x: 0.19, y: 0.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1141,4 +1109,4 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 497200815}
   - {fileID: 2118746524}
-  - {fileID: 1220811340}
+  - {fileID: 517459400}
