@@ -246,13 +246,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 565294371327036888}
-    m_Position: {x: 170, y: 250, z: 0}
+    m_Position: {x: 440, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2464649765825534864}
     m_Position: {x: 440, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2633760320858594841}
-    m_Position: {x: 70, y: 50, z: 0}
+    m_Position: {x: 70, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8529172498959602994}
     m_Position: {x: 290, y: -170, z: 0}
@@ -481,19 +481,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 1
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Die
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Damaged
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
