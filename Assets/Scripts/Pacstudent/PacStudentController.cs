@@ -15,12 +15,16 @@ public class PacStudentController : MonoBehaviour
     public Vector2 gridSize = new Vector2(1, 1);
     public Animator animator;
     public Tilemap tilemap;
-    public AudioSource soundEffect; // First audio source
-    public AudioSource pelletEat; // Second audio source
+    public AudioSource soundEffect; 
+    public AudioSource pelletEat; 
+    public AudioSource wallCollide; 
     public GameObject dustEffectPrefab; 
-    
+    public GameObject wallEffectPrefab; 
+    private bool hit;
+
     private void Start()
     {
+        lastInput = "Right";
         tweener = gameObject.AddComponent<Tweener>(); // Add the Tweener component
         currentGridPosition = item.transform.position; 
         targetPosition = item.transform.position;
@@ -43,23 +47,31 @@ public class PacStudentController : MonoBehaviour
 
     IEnumerator MovePacStudent(string direction)
     {     
+      
       while (true) {
           Vector2 startPosition = currentGridPosition; 
           Vector2 endPosition = startPosition + (GetDirectionVector(currentInput) * gridSize); // Calculate target position
           Vector2 endPosition2 = startPosition + (GetDirectionVector(lastInput) * gridSize); // Calculate target position
           if (IsWalkable(endPosition))
           {
+              hit = true;
               lastInput = currentInput;
               animator.SetInteger("Direction", GetIntDirection(lastInput));
               Move(startPosition, endPosition);
               currentGridPosition = endPosition; // Update current grid position
               yield return new WaitForSeconds(0.1f); // Adjust the delay time here
           } else if (IsWalkable(endPosition2)){
+              hit = true;
               endPosition = startPosition + (GetDirectionVector(lastInput) * gridSize); // Calculate target position
               Move(startPosition, endPosition2);
               currentGridPosition = endPosition2; // Update current grid position
               yield return new WaitForSeconds(0.1f); // Adjust the delay time here
           } else {
+              if (hit == true) { 
+                CreateEffect(wallEffectPrefab, endPosition2);
+                wallCollide.Play();
+                hit = false;
+              }
               yield return new WaitForSeconds(0.0f); // Adjust the delay time here
           }
           yield return new WaitForSeconds(0.0f); // Adjust the delay time here
@@ -70,7 +82,7 @@ public class PacStudentController : MonoBehaviour
     {
         PlayMovementAudio(IsPellet(endPosition)); // Play movement audio
         tweener.AddTween(item.transform, startPosition, endPosition, moveDuration);
-        CreateDustEffect(endPosition);
+        CreateEffect(dustEffectPrefab, endPosition);
     }
    
     
@@ -150,20 +162,18 @@ public class PacStudentController : MonoBehaviour
         soundEffect.Play();
     }
     
-    private void CreateDustEffect(Vector3 position)
+    private void CreateEffect(GameObject prefab, Vector3 position)
     {
-        // Instantiate dust effect at the given position
-        GameObject dustEffect = Instantiate(dustEffectPrefab, position, Quaternion.identity);
+        GameObject Effect = Instantiate(prefab, position, Quaternion.identity);
         
-        // Destroy the dust effect after it finishes playing
-        ParticleSystem ps = dustEffect.GetComponent<ParticleSystem>();
+        ParticleSystem ps = Effect.GetComponent<ParticleSystem>();
         if (ps != null)
         {
-            Destroy(dustEffect, ps.main.duration); // Destroy after duration
+            Destroy(Effect, ps.main.duration); // Destroy after duration
         }
         else
         {
-            Destroy(dustEffect, 1f); // Fallback duration if no particle system is found
+            Destroy(Effect, 1f); // Fallback duration if no particle system is found
         }
     }
     
